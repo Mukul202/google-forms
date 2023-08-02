@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API_URL = "http://localhost:5000/api/form/";
+const API_URL = "https://google-forms-backend.onrender.com/api/form/";
 
 
 export default {
