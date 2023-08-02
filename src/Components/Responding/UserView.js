@@ -5,7 +5,6 @@ import {Grid} from '@material-ui/core';
 import { Paper, Typography } from '@material-ui/core';
 
 import formService from '../../services/formService';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Radio from '@material-ui/core/Radio';
 import AppBar from '@material-ui/core/AppBar';
@@ -16,7 +15,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import Divider from '@material-ui/core/Divider';
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
 
 import auth from '../../services/authService';
 
@@ -32,23 +30,18 @@ function UserView(props) {
     const [userId, setUserId] = React.useState("")
     const [formData, setFormData] = React.useState({});
     const [responseData, setResponseData] = React.useState([])
-    //console.log(responseData);
     
-    const [optionValue, setOptionValue] = React.useState([])
     const [isSubmitted, setIsSubmitted] = React.useState(false)
     
     
     const [questions, setQuestions] = React.useState([]);
     const [value, setValue] = React.useState('');
-    //console.log(value);
     React.useEffect(()=>{
       if(auth.isAuthenticated()){
         var userr = auth.getCurrentUser();
-        console.log(userr.id);
         setUserId(userr.id);  
       } else{
         var anonymousUserId = "anonymous" +  Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-        console.log(anonymousUserId);
         setUserId(anonymousUserId)
       }
     }, [])
@@ -66,9 +59,7 @@ function UserView(props) {
       var data = {
         questionId, optionId
       }
-    //  console.log(data);
-      //console.log(fakeData);
-     // console.log(j);
+    
       
       setValue(j)
 
@@ -84,8 +75,6 @@ function UserView(props) {
         }
 
       
-     // setOptionValue(fakeData);
-    //  
     };
 
     React.useEffect(() => {
@@ -151,7 +140,7 @@ function UserView(props) {
                 <MenuIcon />
               </IconButton>
               <Typography variant="h6" style={{}}>
-                Velocity Forms
+              Mercor Full Stack Forms-Clone
               </Typography>
             </Toolbar>
           </AppBar>

@@ -6,7 +6,6 @@ import { useHistory } from "react-router-dom";
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -20,17 +19,15 @@ import ViewListIcon from '@material-ui/icons/ViewList';
 import Paper from '@material-ui/core/Paper';
 import Hidden from '@material-ui/core/Hidden';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import AcUnitIcon from '@material-ui/icons/AcUnit';
-import IconButton from '@material-ui/core/IconButton';
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       <Link color="inherit" href="https://www.stillthristy.in/">
-      Rohit Saini
+      Mukul
       </Link>
       { ' © '}
-      <Link color="inherit" href="https://github.com/rohitsaini1196">
+      <Link color="inherit" href="https://github.com/mukul202">
         GitHub
       </Link>{' '}
       {new Date().getFullYear()}
@@ -128,12 +125,12 @@ export default function LangingPage() {
   return (
     <div>
       <CssBaseline />
-      <div style={{display: 'flex', flexGrow: 1, textAlign: 'start'}}>
-        <AppBar position="relative" style={{backgroundColor: 'teal'}}>
+      <div style={{display: 'flex', flexGrow: 1, textAlign: 'start', backgroundColor:'#0055D1'}}>
+        <AppBar position="relative" style={{backgroundColor: '#0055D1'}}>
           <Toolbar>
             <ViewListIcon className={classes.icon} />
             <Typography variant="h6" color="inherit" noWrap className={classes.title}>
-              Velocity Forms
+              Mercor Full Stack Forms-Clone
             </Typography>
             <Button color="inherit" onClick={loginClick}>Login</Button>
           
@@ -155,7 +152,7 @@ export default function LangingPage() {
               <Grid item md={6}>
                 <div className={classes.mainFeaturedPostContent}>
                   <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-                    Velocity Forms
+                    Mercor Full Stack Forms-Clone
                   </Typography>
                   <Typography variant="h5" color="inherit" paragraph>
                     Plan your next camping trip, manage event registrations, whip up a quick poll, create a pop quiz, and much more.
@@ -239,17 +236,6 @@ export default function LangingPage() {
         </div>
       </main>
       
-      
-      <footer className={classes.footer} style={{}}>
-        <Typography variant="h6" align="center" gutterBottom>
-          Velocity Forms <small>(An Open source clone of google forms)</small>
-        </Typography>
-        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-         No Copyright issue. This project is <Link color="inherit" href="https://github.com/rohitsaini1196/google-forms">open source</Link>{'. '}
-       Feel free to use anything that you find helpful, Give credit if you want.
-        </Typography>
-        <Copyright />
-      </footer>
     </div>
   );
 }

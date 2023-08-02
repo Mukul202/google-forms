@@ -1,5 +1,4 @@
 import React from 'react'
-//import QuestionHeader from './QuestionHeader';
 import {Grid} from '@material-ui/core';
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
@@ -27,6 +26,7 @@ import ImageUplaodModel from './ImageUplaodModel';
 import formService from '../../services/formService';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import SaveIcon from '@material-ui/icons/Save';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom';
 
 function QuestionsTab(props) {
 
@@ -35,7 +35,7 @@ function QuestionsTab(props) {
   const [imageContextData, setImageContextData] = React.useState({question: null, option: null});
   const [formData, setFormData] = React.useState({});
   const [loadingFormData, setLoadingFormData] = React.useState(true);
-  
+  const history = useHistory();
 
   React.useEffect(()=>{
     
@@ -65,6 +65,7 @@ function QuestionsTab(props) {
     .then((result) => {     
          console.log(result);
          setQuestions(result.questions)
+         history.push('/');
         },
         error => {
         const resMessage =

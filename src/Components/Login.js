@@ -97,7 +97,7 @@ function Login(props){
                     <ViewListIcon className={classes.icon} onClick={()=>{history.push('/')}} />
                    
                     <Typography variant="h6" color="inherit" noWrap className={classes.title}>
-                    Velocity Forms
+                      Mercor Full Stack Forms-Clone
                     </Typography>
                 </Toolbar>
                 </AppBar>

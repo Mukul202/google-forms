@@ -256,7 +256,7 @@ function Dashboard() {
         </IconButton>
 
         <Typography className={classes.title} variant="h6" noWrap>
-          Velocity Forms
+          Mercor Full Stack Forms-Clone
         </Typography>
 
         <div className={classes.search}>
